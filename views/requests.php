@@ -1,15 +1,15 @@
 <?php 
-require('../Controllers/cart_controller.php');
+
 require ('../Settings/core.php');
 session_start();
 
 $ip_add = $_SERVER['REMOTE_ADDR'];
-if(isset($_SESSION['customer_id'])){
-	$result = view_products_controller($ip_add, $_SESSION['customer_id']);
-	$total =  sum_price_controller($ip_add,$_SESSION['customer_id']);
-	$cart_count = count_cart_controller($_SESSION['customer_id']);
+// if(isset($_SESSION['customer_id'])){
+// 	$result = view_products_controller($ip_add, $_SESSION['customer_id']);
+// 	$total =  sum_price_controller($ip_add,$_SESSION['customer_id']);
+// 	$cart_count = count_cart_controller($_SESSION['customer_id']);
 	
-}
+// }
 
 ?>
 <!DOCTYPE html>
@@ -55,11 +55,7 @@ if(isset($_SESSION['customer_id'])){
 	        <ul class="navbar-nav ml-auto">
 	   
 			 
-			  <?php 
-					if(isset($_SESSION['user_role']) == 1){
-						echo'<li class="nav-item"> <a class="nav-link" href="../Admin/index.php">Admin Side</a></li> ';
-					}
-				?>
+			 
 				 <li class="nav-item cta cta-colored "><a href="homepage.php" class="nav-link"><span class=""></span>Home</a></li>
 	          
 		
@@ -102,50 +98,8 @@ if(isset($_SESSION['customer_id'])){
 						      </tr>
 						    </thead>
 						    <tbody>
-								<?php 
-								if(isset($_SESSION['customer_id'])){
-									foreach($result as $cart){
-										$image = $cart['product_image'];
-										$image_src = "../images/products/".$image;
-										$sum = $cart['qty'] * $cart['product_price'];
-										echo"
-											<tr class='text-center'>
-											<form action = ../Actions/add_to_cart.php  method='post'>
-												<input type='hidden' name='p_id' value =". $cart['product_id'].">
-												<input type= 'hidden' name ='c_id'  value =". $_SESSION['customer_id'].">
-												<td class='product-remove'><button class='btn  text-white' name='del_cart'><a href='#'><span class='ion-ios-trash'></span></a> </button></td>
-											</form>
-
-												
-												
-												<td class='image-prod'><img src=' $image_src' alt=''></td>
-												
-												<td class='product-name'>
-													<h3>$cart[product_title]</h3>
-													<p>$cart[product_desc]</p>
-												</td>
-												
-												<td class='price'>GH₵ $cart[product_price]</td>
-											
-												<td class='quantity'>
-													<div class='input-group mb-3'>
-														<form  action='../Actions/manage_quantity_cart.php' method='post' class='d-flex ml-4'>
-														<input type='hidden' name='p_id' value =". $cart['product_id'].">
-														<input type='hidden' name='c_id' value =". $cart['c_id'].">
-														<input type='number' name='p_qty' value =". $cart['qty'].">
-														<button class='btn ml-4' name='update_qty' type='submit'>Update</button>
-													</form>
-													</div>
-											</td>
-												
-											<td>  
-											<p>₵ $sum</p>
-											</td>
-											</tr><!-- END TR-->
-										";
-									}
-								}
-								?>
+						
+								
 						    </tbody>
 						  </table>
 					  </div>

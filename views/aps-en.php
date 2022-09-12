@@ -34,18 +34,18 @@
             </div>
         </nav>
         <div class="login-form">
-            <form action="../Actions/registerprocess.php" method="post" id="login-form">
+            <form action="../Actions/add_request.php" method="post" id="login-form">
             <a class="btn btn-outline-success mb-5" href="homepage.php" >Back</a>
                 <h2 class="text-center">Request Aps Eric Nyamekye Messages</h2> 
                 
                 
                 <div class="form-group mb-3">
-                    <input type="text" class="form-control " placeholder="Full Name" id="name" name="name">
+                    <input type="text" class="form-control " placeholder="Full Name" id="name" name="fname">
                     
                 </div>
 
                 <div class="form-group mb-3">
-                    <input type="text" class="form-control " placeholder="Denomination" id="pnumber" name="pnumber">
+                    <input type="text" class="form-control " placeholder="Denomination" id="pnumber" name="dnation">
                     
                 </div>
 
@@ -59,35 +59,17 @@
                 <div class="d-flex justify-content-center">
 
                     <div class="fmt form-group mb-3 " >
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="Audio" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Audio
-                            </label>
-                        </div>
-
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="Video" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Video
-                            </label>
-                        </div>
+                        <input type="radio" id="Pendrive" name="format" value="Pendrive">
+                        <label for="Pendrive">Video</label><br>
+                        <input type="radio" id="cd" name="format" value="CD">
+                        <label for="CD">Audio</label><br>
                     </div>
 
-                <div class="fmt form-group mb-3 " >
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="Pendrive" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Pendrive
-                            </label>
-                        </div>
-
-                        <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" value="CD" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                CD
-                            </label>
-                        </div>
+                    <div class="fmt form-group mb-3 " >
+                        <input type="radio" id="Pendrive" name="media" value="Pendrive">
+                        <label for="Pendrive">Pendrive</label><br>
+                        <input type="radio" id="cd" name="media" value="CD">
+                        <label for="CD">CD</label><br>
                     </div>
 
                 </div>
@@ -100,28 +82,28 @@
                 <div class="fmt form-group mb-3 " >
 
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="DECEPTION" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" name="messages[]" value="DECEPTION" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Deception
                         </label>
                     </div>
 
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="FEED MY SHEEP" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" name="messages[]" value="FEED MY SHEEP" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Feed my sheep
                         </label>
                     </div>
 
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="Modelling" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" name="messages[]"  value="Modelling" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Modelling
                         </label>
                     </div>
 
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="The Law Of The Spirit" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" name="messages[]"  value="The Law Of The Spirit" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             The Law Of The Spirit
                         </label>
@@ -135,7 +117,7 @@
                     </div>
 
                     <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="The Three Righteous Men" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" name="messages[]"  value="The Three Righteous Men" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             The Three Righteous Men
                         </label>
@@ -147,7 +129,7 @@
 
                 
                 <div class="form-group container d-flex justify-content-center mt-5">
-                    <button type="submit" class="btn btn-primary btn-block" id= "submitbtn" name="submit">Submit Request</button>
+                    <button type="submit" class="btn btn-primary btn-block" id= "submitbtn" name="aps_en_add">Submit Request</button>
                 </div>
                 
                 

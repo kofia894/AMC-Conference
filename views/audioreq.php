@@ -50,6 +50,7 @@
                 <input type="text" class="form-control " placeholder="Full Name" id="name" name="fname">
                 
             </div>
+            
 
             <div class="form-group mb-3">
                 <input type="text" class="form-control " placeholder="Phone Number" id="pnumber" name="pnumber">

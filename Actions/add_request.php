@@ -84,6 +84,43 @@ if(isset($_POST['add_video_req'])){
 
 }
 
+if(isset($_POST['aps_en_add'])){
+    // retrieve the name, description and quantity from the form submission
+    $name = $_POST['fname'];
+    $dnation = $_POST['dnation'];
+    $pnumber = $_POST['pnumber'];
+    $media = $_POST['media'];
+    $format = $_POST['format'];
+    $messages = $_POST['messages'];
+    
+
+    
+    // call the add_product_controller function: return true or false
+    $result = add_aps_en_controller($name,$dnation,$pnumber,$media, $format,implode(", " , $messages));
+    
+    
+    
+    if($result === true){
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal(" Request Sent","Your request has been made","success").then(function() {window.location.href = "../views/homepage.php";})';
+        echo '}, 1000);</script>';
+        
+     
+        // header('Location: Add_brand.php');
+        // header('Location: ');
+    } 
+    else {
+        
+        
+        echo '<script type="text/javascript">';
+        echo 'setTimeout(function () { swal(" Unable to Make request","Something went wrong","error").then(function() {window.location.href = "../views/homepage.php";})';
+        echo '}, 1000);</script>';
+        
+        
+    }
+
+}
+
 
 
 

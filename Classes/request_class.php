@@ -14,6 +14,14 @@ class Request extends Connection{
 								
 	}
 
+	function add_aps_en($name,$dnation,$pnumber,$media,$format,$messages){
+		// return true or false
+		return $this->query("INSERT INTO `aps_en`(`name`, `denomination`, `phone_number`, `media`, `format`, `messages`) 
+										values('$name','$dnation','$pnumber', '$media', '$format', '$messages')");
+
+								
+	}
+
 	
 
 	

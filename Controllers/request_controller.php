@@ -11,6 +11,15 @@ function add_request_controller($name,$dnation,$pnumber,$req_type, $media,$speak
 
 }
 
+function add_aps_en_controller($name,$dnation,$pnumber,$media, $format,$messages){
+   
+    $request_instance = new Request();
+    
+    return $request_instance->add_aps_en($name,$dnation,$pnumber,$media, $format,$messages);
+
+}
+
+
 
 
 ?>
