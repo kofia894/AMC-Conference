@@ -16,13 +16,15 @@ if(isset($_POST['add_audio_req'])){
     $media = $_POST['media'];
     $speakers = $_POST['speakers'];
     $req_type = "audio";
+   
+
 
     
    
-    echo $name,$dnation,$pnumber,$media,$speakers,$req_type;
+    // var_dump( implode(", " , $speakers)) ;
     
     // call the add_product_controller function: return true or false
-    $result = add_request_controller($name,$dnation,$pnumber,$req_type, $media, $speakers);
+    $result = add_request_controller($name,$dnation,$pnumber,$req_type, $media, implode(", " , $speakers));
     
     echo $result;
     if($result === true){
@@ -57,11 +59,8 @@ if(isset($_POST['add_video_req'])){
     $req_type = "video";
 
     
-   
-    echo $name,$dnation,$pnumber,$media,$speakers,$req_type;
-    
     // call the add_product_controller function: return true or false
-    $result = add_request_controller($name,$dnation,$pnumber,$req_type, $media, $speakers);
+    $result = add_request_controller($name,$dnation,$pnumber,$req_type, $media, implode(", " , $speakers));
     
     echo $result;
     if($result === true){

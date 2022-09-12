@@ -80,49 +80,49 @@
 
                 <div class="fmt form-group mb-3">
                     <div class="form-check mb-3 text">
-                        <input class="form-check-input" name = "speakers" type="checkbox" value="Aps Eric Nyamekye" id="flexCheckDefault">
+                        <input class="form-check-input" name = "speakers[]" type="checkbox" value="Aps Eric Nyamekye" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Aps Eric Nyamekye
                         </label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input"  name = "speakers" type="checkbox" value="Aps General Sam Korankye Ankrah" id="flexCheckDefault">
+                        <input class="form-check-input"  name = "speakers[]" type="checkbox" value="Aps General Sam Korankye Ankrah" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Aps General Sam Korankye Ankrah
                         </label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input"  name = "speakers" type="checkbox" value="Rev Prof Frimpong Maanso" id="flexCheckDefault" >
+                        <input class="form-check-input"  name = "speakers[]" type="checkbox" value="Rev Prof Frimpong Maanso" id="flexCheckDefault" >
                         <label class="form-check-label" for="flexCheckDefault">
                             Rev Prof Frimpong Maanso    
                         </label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" name = "speakers" type="checkbox" value="Aps Prof Opoku Onyinah" id="flexCheckDefault">
+                        <input class="form-check-input" name = "speakers[]" type="checkbox" value="Aps Prof Opoku Onyinah" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Aps Prof Opoku Onyinah   
                         </label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" name = "speakers" type="checkbox" value="Mrs Gifty Dansoah Appiah" id="flexCheckDefault">
+                        <input class="form-check-input" name = "speakers[]" type="checkbox" value="Mrs Gifty Dansoah Appiah" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Mrs Gifty Dansoah Appiah
                         </label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" name = "speakers" type="checkbox" value="Rev Dr Joyce Aryee" id="flexCheckDefault">
+                        <input class="form-check-input" name = "speakers[]" type="checkbox" value="Rev Dr Joyce Aryee" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Rev Dr Joyce Aryee
                         </label>
                     </div>
                     <div class="form-check mb-3">
-                        <input class="form-check-input" name = "speakers" type="checkbox" value="Rev Dr Opuni Frimpong" id="flexCheckDefault">
+                        <input class="form-check-input" name = "speakers[]" type="checkbox" value="Rev Dr Opuni Frimpong" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Rev Dr Opuni Frimpong
                         </label>
                     </div>
                     <div class="form-check mb-5">
-                        <input class="form-check-input" name = "speakers" type="checkbox" value="Very Rev Prof Johnson Kwabena Asamoah-Gyadu" id="flexCheckDefault">
+                        <input class="form-check-input" name = "speakers[]"type="checkbox" value="Very Rev Prof Johnson Kwabena Asamoah-Gyadu" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Very Rev Prof Johnson Kwabena Asamoah-Gyadu
                         </label>
